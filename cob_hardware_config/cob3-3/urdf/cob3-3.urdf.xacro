@@ -25,7 +25,7 @@
 
   <!-- head -->
   <include filename="$(find cob_description)/urdf/head_v3/head.urdf.xacro" />
-  <include filename="$(find cob_description)/urdf/lookat/lookat.urdf.xacro" />
+  <!--<include filename="$(find cob_description)/urdf/lookat/lookat.urdf.xacro" />-->
 
   <!-- arm -->
   <include filename="$(find cob_description)/urdf/lbr/lbr.urdf.xacro" />
@@ -42,13 +42,11 @@
   <joint name="base_placement_helper_joint" type="fixed">
     <parent link="base_placement_theta_link"/>
     <child link="base_footprint"/>
-  </joint>   
+  </joint> 
  
   <!-- composition of the robot -->
   <xacro:cob_base name="base"/>
 
-  <xacro:cob_component type="cob_torso_v1" name="tray" parent="base_link"/>
- 
   <xacro:cob_tray name="tray" parent="base_link">
     <origin xyz="${tray_x} ${tray_y} ${tray_z}" rpy="${tray_roll} ${tray_pitch} ${tray_yaw}" />
   </xacro:cob_tray>
