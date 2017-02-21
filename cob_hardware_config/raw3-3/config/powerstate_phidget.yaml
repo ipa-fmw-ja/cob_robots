@@ -1,4 +1,4 @@
-voltage_max: 102.0
+voltage_divider_factor: 102.0  # The voltage for which the voltage divider puts out 5V (Analog Input VMax for phidgets board)
 voltage_full: 50.0
 voltage_empty: 44.0
 current_max: 20.0
